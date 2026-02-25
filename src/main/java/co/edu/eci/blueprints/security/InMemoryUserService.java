@@ -13,8 +13,19 @@ public class InMemoryUserService {
         this.encoder = encoder;
         this.users = Map.of(
             "student", encoder.encode("student123"),
-            "assistant", encoder.encode("assistant123")
+            "assistant", encoder.encode("assistant123"),
+                "admin", encoder.encode("admin123")
+
         );
+    }
+
+    public String getScopesByUsername(String username) {
+        return switch (username) {
+            case "admin" -> "blueprints.read blueprints.write blueprints.create blueprints.update";
+            case "assistant" -> "blueprints.read blueprints.write";
+            case "student" -> "blueprints.read";
+            default -> "";
+        };
     }
 
     public boolean isValid(String username, String rawPassword) {
