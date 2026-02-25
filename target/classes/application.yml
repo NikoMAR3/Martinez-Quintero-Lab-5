@@ -2,6 +2,19 @@ server:
   port: 8080
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/blueprintsdb
+    username: blueprints
+    password: blueprints123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   security:
     oauth2:
       resourceserver:
