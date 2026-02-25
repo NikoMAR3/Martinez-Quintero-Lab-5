@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/blueprints")
-@Tag(name = "Blueprints Simple", description = "API simplificada para gestión de blueprints")
+@Tag(name = "Blueprints Simple", description = "API default de la parte 2 del laboratorio con endpoints Blueprint simplificados")
 public class BlueprintController {
 
     @Operation(summary = "Obtiene todos los blueprints")
