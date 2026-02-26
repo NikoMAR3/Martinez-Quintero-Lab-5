@@ -235,8 +235,8 @@ curl -X GET http://localhost:8080/api/blueprints \
 
 | Nombre | GitHub |
 |--------|--------|
-| **María Belén Quintero** | [@mariaquintero](https://github.com/mariaquintero) |
-| **Nikolas Martínez Rivera** | [@nikolasmartinez](https://github.com/nikolasmartinez) |
+| **María Belén Quintero** | [@mbquial](https://github.com/mbquial) |
+| **Nikolas Martínez Rivera** | [@NikoMAR3](https://github.com/NikoMAR3) |
 
 ---
 
