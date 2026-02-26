@@ -194,7 +194,7 @@ src/main/java/co/edu/eci/blueprints/
 
 ---
 
-## � Informe del laboratorio
+## 🚨 Informe del laboratorio
 
 El documento del laboratorio en formato PDF se encuentra en la carpeta **`docs/`**.
 
@@ -231,7 +231,7 @@ curl -X GET http://localhost:8080/api/blueprints \
 
 ---
 
-## �👥 Autores
+## 👥 Autores
 
 | Nombre | GitHub |
 |--------|--------|
