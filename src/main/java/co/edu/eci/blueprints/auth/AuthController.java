@@ -14,7 +14,7 @@ import java.time.Instant;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 @Tag(name = "Authentication", description = "API para autenticación y generación de tokens JWT")
 public class AuthController {
 
