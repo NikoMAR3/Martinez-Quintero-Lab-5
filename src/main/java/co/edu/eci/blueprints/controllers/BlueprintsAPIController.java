@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api/v1/blueprints")
+@RequestMapping("/api/blueprints")
 @Tag(name = "Blueprints", description = "API para gestión de planos (blueprints)")
 public class BlueprintsAPIController {
 

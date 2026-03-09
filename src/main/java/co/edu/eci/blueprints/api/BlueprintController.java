@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/blueprints")
+@RequestMapping("/api/legacy/blueprints")
 @Tag(name = "Blueprints Simple", description = "API default de la parte 2 del laboratorio con endpoints Blueprint simplificados")
 public class BlueprintController {
 
