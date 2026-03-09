@@ -15,11 +15,11 @@ public class InMemoryBlueprintPersistence implements BlueprintPersistence {
 
     public InMemoryBlueprintPersistence() {
         // Sample data 1:1 style (author/name key)
-        Blueprint bp1 = new Blueprint("john", "house",
+        Blueprint bp1 = new Blueprint("student", "house",
                 List.of(new Point(0,0), new Point(10,0), new Point(10,10), new Point(0,10)));
-        Blueprint bp2 = new Blueprint("john", "garage",
+        Blueprint bp2 = new Blueprint("student", "garage",
                 List.of(new Point(5,5), new Point(15,5), new Point(15,15)));
-        Blueprint bp3 = new Blueprint("jane", "garden",
+        Blueprint bp3 = new Blueprint("admin", "garden",
                 List.of(new Point(2,2), new Point(3,4), new Point(6,7)));
         blueprints.put(keyOf(bp1), bp1);
         blueprints.put(keyOf(bp2), bp2);
