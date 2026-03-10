@@ -23,7 +23,7 @@ public class Blueprint {
     @Schema(description = "Nombre del blueprint", example = "Casita")
     private String name;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(
             name = "blueprint_points",
             joinColumns = @JoinColumn(name = "blueprint_id")

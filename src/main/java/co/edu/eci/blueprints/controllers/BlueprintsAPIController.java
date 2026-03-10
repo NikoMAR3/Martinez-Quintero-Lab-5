@@ -110,4 +110,19 @@ public class BlueprintsAPIController {
             @NotBlank String name,
             @Valid java.util.List<Point> points
     ) { }
+
+    @Operation(summary = "Elimina un blueprint")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Plano eliminado exitosamente"),
+            @ApiResponse(responseCode = "404", description = "No se encontró el plano especificado")
+    })
+    @DeleteMapping("/{author}/{bpname}")
+    public ResponseEntity<?> delete(@PathVariable String author, @PathVariable String bpname) {
+        try {
+            services.deleteBlueprint(author, bpname);
+            return ResponseEntity.ok(new ApiResponseS<>(200, "Plano eliminado exitosamente", null));
+        } catch (BlueprintNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponseS<>(404, e.getMessage(), null));
+        }
+    }
 }

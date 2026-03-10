@@ -51,4 +51,10 @@ public class PostgresBlueprintPersistence implements BlueprintPersistence {
         bp.addPoint(new Point(x, y));
         repo.save(bp);
     }
+
+    @Override
+    public void deleteBlueprint(String author, String name) throws BlueprintNotFoundException {
+        Blueprint bp = getBlueprint(author, name);
+        repo.delete(bp);
+    }
 }
