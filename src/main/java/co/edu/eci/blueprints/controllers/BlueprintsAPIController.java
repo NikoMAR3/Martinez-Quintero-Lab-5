@@ -26,7 +26,7 @@ public class BlueprintsAPIController {
 
     public BlueprintsAPIController(BlueprintsServices services) { this.services = services; }
 
-    // GET /blueprints
+
     @Operation(summary = "Obtiene todos los blueprints")
     @ApiResponse(responseCode = "200", description = "Lista de todos los planos obtenida exitosamente")
     @GetMapping
@@ -36,7 +36,7 @@ public class BlueprintsAPIController {
         );
     }
 
-    // GET /blueprints/{author}
+
     @Operation(summary = "Obtiene los blueprints filtrados por autor")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Planos del autor encontrados"),
@@ -53,7 +53,7 @@ public class BlueprintsAPIController {
         }
     }
 
-    // GET /blueprints/{author}/{bpname}
+
     @Operation(summary = "Obtiene un blueprint específico por autor y nombre")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Plano encontrado exitosamente"),
@@ -70,7 +70,7 @@ public class BlueprintsAPIController {
         }
     }
 
-    // POST /blueprints
+
     @Operation(summary = "Crea un nuevo blueprint")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "201", description = "Plano creado exitosamente"),
@@ -88,7 +88,7 @@ public class BlueprintsAPIController {
         }
     }
 
-    // PUT /blueprints/{author}/{bpname}/points
+
     @Operation(summary = "Agrega un punto a un blueprint existente")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "202", description = "Punto agregado exitosamente"),
